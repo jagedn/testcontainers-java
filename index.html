@@ -514,7 +514,7 @@ table.CodeRay td.code>pre{padding:0}
 <h1>TestContainers</h1>
 <div class="details">
 <span id="revnumber">version 0-SNAPSHOT,</span>
-<span id="revdate">2017-07-29T17:51:27Z</span>
+<span id="revdate">2017-07-29T18:01:32Z</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -547,16 +547,55 @@ table.CodeRay td.code>pre{padding:0}
 <h1 id="_compatibility" class="sect0"><a class="link" href="#_compatibility">Compatibility</a></h1>
 <div class="openblock partintro">
 <div class="content">
-| Host Operating System / Environment | Minimum recommended docker versions | Known issues / tips                                                                                                                                                                                                                                                                                                                                                |
-|-------------------------------------|-----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Linux - general                     | Docker v1.10              |                                                                                                                                                                                                                                                                                                                                                                    |
-| Linux - Travis CI                   | Docker v1.10              | See [example .travis.yml](<a href="https://raw.githubusercontent.com/testcontainers/testcontainers-java/master/.travis.yml" class="bare">https://raw.githubusercontent.com/testcontainers/testcontainers-java/master/.travis.yml</a>) for baseline Travis CI configuration                                                                                                                                                                                                                                                                                     |
-| Linux - Circle CI (LXC driver)      | Docker v1.9.1               | The <code>exec</code> feature is not compatible with Circle CI. See [example circle.yml](<a href="https://raw.githubusercontent.com/testcontainers/testcontainers-java/master/circle.yml" class="bare">https://raw.githubusercontent.com/testcontainers/testcontainers-java/master/circle.yml</a>) for baseline CircleCI configuration                                                                                                                                                                                                                                   |
-| Linux - within a Docker container            | Docker v1.12              | See [Running inside Docker](usage/inside_docker.md) for the detailed configuration                                                                                                                                                                                                                                 |
-| Mac OS X - Docker Toolbox           | Docker Machine v0.8.0  |                                                                                                                                                                                                                                                                                                                                                                    |
-| Mac OS X - Docker for Mac      | 1.12.0          | <strong>Support is best-efforts at present</strong>. <code>getTestHostIpAddress()</code> is [not currently supported](<a href="https://github.com/testcontainers/testcontainers-java/issues/166" class="bare">https://github.com/testcontainers/testcontainers-java/issues/166</a>) due to limitations in Docker for Mac. |
-| Windows - Docker Toolbox            |                             | <strong>Support is limited at present and this is not currently tested on a regular basis</strong>.                                                                                                                                                                                                                                                                               |
-| Windows - Docker for Windows   |                             | <strong>Supported is limited at present (Docker Compose tests are failing) and not currently tested on a regular basis.</strong>                                                                                                                                                                                                                                                                                                                                        |
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Host Operating System / Environment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum recommended docker versions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Known issues / tips</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linux - general</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Docker v1.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linux - Travis CI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Docker v1.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See [example .travis.yml](<a href="https://raw.githubusercontent.com/testcontainers/testcontainers-java/master/.travis.yml" class="bare">https://raw.githubusercontent.com/testcontainers/testcontainers-java/master/.travis.yml</a>) for baseline Travis CI configuration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linux - Circle CI (LXC driver)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Docker v1.9.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>exec</code> feature is not compatible with Circle CI. See [example circle.yml](<a href="https://raw.githubusercontent.com/testcontainers/testcontainers-java/master/circle.yml" class="bare">https://raw.githubusercontent.com/testcontainers/testcontainers-java/master/circle.yml</a>) for baseline CircleCI configuration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linux - within a Docker container</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Docker v1.12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See [Running inside Docker](usage/inside_docker.md) for the detailed configuration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mac OS X - Docker Toolbox</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Docker Machine v0.8.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mac OS X - Docker for Mac</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.12.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Support is best-efforts at present</strong>. <code>getTestHostIpAddress()</code> is [not currently supported](<a href="https://github.com/testcontainers/testcontainers-java/issues/166" class="bare">https://github.com/testcontainers/testcontainers-java/issues/166</a>) due to limitations in Docker for Mac.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows - Docker Toolbox</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Support is limited at present and this is not currently tested on a regular basis</strong>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows - Docker for Windows</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect1">
