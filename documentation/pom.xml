@@ -72,9 +72,8 @@
 		<artifactId>maven-scm-publish-plugin</artifactId>
     		<version>1.0-beta-2</version>
     		<configuration>
-        		<checkoutDirectory>${project.build.directory}/target/generated-docs</checkoutDirectory>
+        		<content>${project.build.directory}/generated-docs</content>
         		<checkinComment>Publishing javadoc for ${project.artifactId}:${project.version}</checkinComment>
-        		<content>${project.reporting.outputDirectory}/apidocs</content>
         		<skipDeletedFiles>true</skipDeletedFiles>
         		<pubScmUrl>scm:git:git@github.com:jagedn/testcontainers-java.git</pubScmUrl>
         		<scmBranch>gh-pages</scmBranch> <!-- branch with static site -->
