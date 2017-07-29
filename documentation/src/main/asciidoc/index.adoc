@@ -1,0 +1,24 @@
+= TestContainers
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:imagesdir: images
+:icons: font
+:linkattrs:
+:stem:
+:google-analytics-code: UA-66911573-4
+
+include::overview.asciidoc[]
+
+include::compatibility.asciidoc[]
+
+include::use_cases.asciidoc[]
+
+== Copyright
+
+Copyright (c) 2015, 2016 Richard North and other authors.
+
+See [AUTHORS](https://raw.githubusercontent.com/testcontainers/testcontainers-java/master/AUTHORS) for contributors.
